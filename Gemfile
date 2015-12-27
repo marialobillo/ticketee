@@ -25,4 +25,5 @@ end
 
 group :test do
   gem 'capybara', '~> 2.5'
+  gem 'factory_girl', '~> 4.5'
 end
