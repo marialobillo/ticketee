@@ -1,17 +1,19 @@
-<h2>New Project</h2>
+<div class="row">
+  <h2>New Project</h2>
 
-<%= form_for(@project) do |f| %>
-<p>
-  <%= f.label :name %> <br>
-  <%= f.text_field :name %>
-</p>
+  <%= form_for(@project) do |f| %>
+  <p>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name %>
+  </p>
 
-<p>
-  <%= f.label :description %> <br>
-  <%= f.text_field :description %>
-</p>
+  <p>
+    <%= f.label :description %> <br>
+    <%= f.text_field :description %>
+  </p>
 
-<p>
-  <%= button_to 'Create Project', new_project_path, :method => :get %>
-</p>
-<% end %>
+  <p>
+    <%= button_to 'Create Project', new_project_path, :method => :get %>
+  </p>
+  <% end %>
+</div>
