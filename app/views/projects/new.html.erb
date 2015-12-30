@@ -1,34 +1,10 @@
 <div class="row">
   <h2>New Project</h2>
 
-  <%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %>
-        prohibited this project from being saved: </h2>
+  <%= render "form" %>
 
-      <ul>
-        <% @project.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= f.label :name %> <br>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :description %> <br>
-    <%= f.text_field :description %>
-  </p>
-
-  <p>
-    <%= button_to 'Create Project', new_project_path, :method => :get, class: 'btn btn-info' %>
-  </p>
-  <% end %>
 </div>
+
 <div class="row">
   <%= link_to 'Back Home', root_path , class: 'btn btn-info' %>
 </div>
