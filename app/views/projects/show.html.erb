@@ -17,3 +17,12 @@
   <%= link_to "New Ticket", new_project_ticket_path(@project) %>
     <%= link_to 'Back Home', root_path , class: 'btn btn-info' %>
 </div>
+
+<ul id="tickets">
+  <% @project.tickets.each do |ticket| %>
+    <li>
+      #<%= ticket.id %>
+      <%= link_to ticket.title, [@project, ticket] %>
+    </li>
+  <% end %>
+</ul>
