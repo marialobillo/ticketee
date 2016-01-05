@@ -24,4 +24,10 @@ feature "Creating Tickets" do
     expect(page).to have_content("Title cant be blank.")
     expect(page).to have_content("Description cant be blank.")
   end
+
+  scenario "Description must be longer than 10 characters" do
+    fill_in "Title", with: "Non-standards compliance"
+    fill_in "Description", with: "it sucks"
+    click_button "Create Ticket"
+  end
 end
