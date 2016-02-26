@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 feature "Creating Tickets" do
-
   before do
     FactoryGirl.create(:project, name: "Internet Explorer")
     visit "/"
