@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 feature "Viewing tickets" do
-
   before do
     atom_2 = FactoryGirl.create(:project, name: "Atom 2")
 
@@ -16,7 +15,7 @@ feature "Viewing tickets" do
     FactoryGirl.create(:ticket,
           project: internet_explorer,
           title: "Standards compliance",
-          description: "Isn't a joje.")
+          description: "Isn't a joke.")
 
     visit '/'
   end

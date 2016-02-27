@@ -14,6 +14,7 @@ feature "Creating Tickets" do
     click_button "Create Ticket"
 
     expect(page).to have_content("Ticket has been created.")
+    expect(page).to have_content("Description is too short")
   end
 
   scenario "Creating a ticket without valid attributes fails" do
