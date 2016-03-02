@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe User do
   describe 'passwords' do
-    it 'needs a passwors and confirmation to save' to
+    it 'needs a passwors and confirmation to save' do
       u = User.new(name: 'steve')
 
       u.save
@@ -40,7 +40,7 @@ describe User do
     end
 
     it "does not authenticate with an incorrect password" do
-      expect(user.authenticate("hunter1")).to_not be 
+      expect(user.authenticate("hunter1")).to_not be
     end
   end
 end
