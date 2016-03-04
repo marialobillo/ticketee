@@ -17,7 +17,10 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-          <%= link_to "Sign up", new_user_path, class: 'navbar-brand' %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Sign up", new_user_path %></li>
+          <li><%= link_to "Sign in", signin_path %></li>
+        </ul>
       </div>
     </div>
   </nav>
