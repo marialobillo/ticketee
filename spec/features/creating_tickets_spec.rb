@@ -2,9 +2,20 @@ require 'spec_helper'
 
 feature "Creating Tickets" do
   before do
-    FactoryGirl.create(:project, name: "Internet Explorer")
+    project = FactoryGirl.create(:project)
+    user = FactoryGirl.create(:user)
+
     visit "/"
-    click_link "Internet Explorer"
+    click_link project.name
+    click_link "New Ticket"
+    message = "You need to sign in or sign up before continuing."
+    expect(page).to have_content(messege)
+
+    fill_in "Name", with: user.name
+    fill_in "Password", with: user.password
+    click_button "Sign in"
+
+    click_link project.name
     click_link "New Ticket"
   end
 
