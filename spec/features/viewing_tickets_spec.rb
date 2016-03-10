@@ -4,10 +4,12 @@ feature "Viewing tickets" do
   before do
     atom_2 = FactoryGirl.create(:project, name: "Atom 2")
 
-    FactoryGirl.create(:ticket,
+    user = FactoryGirl.create(:user)
+    ticket = FactoryGirl.create(:ticket,
           project: atom_2,
           title: "Make it shiny!",
           description: "Gradients! Starbursts! Oh my!")
+    ticket.update(user: user)
 
     internet_explorer = FactoryGirl.create(:project,
                                           name: "Internet Explorer")
