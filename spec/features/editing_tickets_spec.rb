@@ -4,6 +4,11 @@ feature "Editing tickets" do
 
   let!(:project) { FactoryGirl.create(:project) }
   let!(:ticket) { FactoryGirl.create(:ticket, project: project) }
+  let!(:ticket) do
+    ticket = FactoryGirl.create(:ticket, project: project)
+    ticket.update(user: user)
+    ticket
+  end
 
   before do
     visit '/'
