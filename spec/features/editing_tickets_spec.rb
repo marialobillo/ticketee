@@ -11,6 +11,7 @@ feature "Editing tickets" do
   end
 
   before do
+    sign_in_as!(user)
     visit '/'
     click_link project.name
     click_link ticket.title
