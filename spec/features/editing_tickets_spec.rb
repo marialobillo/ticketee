@@ -3,12 +3,7 @@ require 'spec_helper'
 feature "Editing tickets" do
 
   let!(:project) { FactoryGirl.create(:project) }
-  let!(:ticket) { FactoryGirl.create(:ticket, project: project) }
-  let!(:ticket) do
-    ticket = FactoryGirl.create(:ticket, project: project)
-    ticket.update(user: user)
-    ticket
-  end
+  let!(:user) { FactoryGirl.create(:ticket, project: project) }
 
   before do
     sign_in_as!(user)
