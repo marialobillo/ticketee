@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     helper_method :require_signin!
 
     def current_user
-      @current_user ||= User.find(session[:user_id]) if sesssion[:user_id]
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
     helper_method :current_user
 end
