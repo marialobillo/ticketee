@@ -1,6 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe ProjectsController, type: :controller do
+  let(:user) { FactoryGirl.create(:user) }
+
+  context "standard users" do
+    before do
+      sign_in(user)
+    end
+
+    it "cannot access the new action" do
+      get :new
+
+      expect(response).to redirect_to('/')
+      expect(flash[:alert]).to eql("You must be an admin to do that.")
+    end
+  end
 
   it "displays an error for a missing project" do
     get :show, id: "not-here"
