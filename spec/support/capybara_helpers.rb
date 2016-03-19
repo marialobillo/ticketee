@@ -8,4 +8,8 @@ module CapybaraHelpers
     expect(page).to(have_css("a", :text => text),
       "Expected to see the #{text.inspect} link, but did not.")
   end
+
+  RSpec.configure do |config|
+    config.include CapybaraHelpers, :type => :feature
+  end
 end
