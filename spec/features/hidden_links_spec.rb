@@ -4,6 +4,7 @@ feature "hidden links" do
   let(:user) { FactoryGirl.create(:user) }
   let(:admin) { FactoryGirl.create(:admin_user) }
   let(:project) { FactoryGirl.create(:project) }
+  
 
   context "anonymous users" do
     scenario "cannot see the New Project link" do
