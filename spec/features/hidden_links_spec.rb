@@ -47,5 +47,10 @@ feature "hidden links" do
       visit project_path(project)
       assert_no_link_for "Edit Project"
     end
+
+    scenario "cannot see the Delete Project link" do
+      visit project_path(project)
+      assert_no_link_for "Delete Project"
+    end
   end
 end
