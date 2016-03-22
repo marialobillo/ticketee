@@ -43,6 +43,9 @@ feature "hidden links" do
   end
 
   context "regular users" do
-
+    scenario "cannot see the Edit Project link" do
+      visit project_path(project)
+      assert_no_link_for "Edit Project"
+    end
   end
 end
