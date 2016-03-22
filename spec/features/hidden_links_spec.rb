@@ -41,4 +41,8 @@ feature "hidden links" do
     end
 
   end
+
+  context "regular users" do
+
+  end
 end
