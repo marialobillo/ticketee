@@ -25,4 +25,15 @@ feature 'Editing a user' do
        expect(page).to_not have_content(user.email)
      end
    end
+
+   scenario "Toggling user's admin ability" do
+     check "Is an admin?"
+     click_button "Update User"
+
+     expect(page).to have_content("User has been updated.")
+
+     within("#users") do
+       expect(page).to have_content("#{user.email} (Admin)")
+     end
+   end
 end
