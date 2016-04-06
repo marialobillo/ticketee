@@ -50,7 +50,9 @@ describe User do
       u.save
       expect(u).to_not be_valid
 
-      
+      u.email = "steve@example.com"
+      u.save
+      expect(u).to be_valid
     end
   end
 end
