@@ -9,6 +9,10 @@ class Admin::UsersController < Admin::BaseController
     @user = User.new
   end
 
+  def show
+
+  end
+
   def create
     params = user_params.dup
     params[:password_confirmation] = params[:password]
