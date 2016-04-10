@@ -37,4 +37,8 @@ class Admin::UsersController < Admin::BaseController
                                     :admin)
     end
 
+    def set_user
+
+    end
+
 end
