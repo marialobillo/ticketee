@@ -33,6 +33,10 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def update
+    if params[:user][:password].blank?
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
+    end
     if @user.update(user_params)
       flash[:notice] = "User has been updated."
       redirect_to admin_users_path
