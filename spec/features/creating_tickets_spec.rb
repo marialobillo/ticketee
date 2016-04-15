@@ -46,6 +46,7 @@ feature "Creating Tickets" do
   end
 
   whitin "#ticket #author" do
-    expect(page).to have_content("Created by sample@example.com")
+    #expect(page).to have_content("Created by sample@example.com")
+    expect(page).to have_content("Created by #{@email}")
   end
 end
