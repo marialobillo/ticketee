@@ -15,5 +15,7 @@ feature 'Deleting users' do
   scenario "Deleting a user" do
     click_link user.email
     click_link "Delete User"
+
+    expect(page).to have_content("User has been deleted")
   end
 end
