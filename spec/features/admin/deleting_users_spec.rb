@@ -11,4 +11,9 @@ feature 'Deleting users' do
     click_link 'Admin'
     click_link 'Users'
   end
+
+  scenario "Deleting a user" do
+    click_link user.email
+    click_link "Delete User"
+  end
 end
