@@ -46,6 +46,10 @@ class Admin::UsersController < Admin::BaseController
     end
   end
 
+  def destroy
+    
+  end
+
   private
 
     def user_params
