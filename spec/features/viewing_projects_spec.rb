@@ -10,9 +10,9 @@ feature "Viewing projects" do
   end
 
   scenario "Listing all projects" do
-    project = FactoryGirl.create(:project, name: "Atom 1")
     visit '/'
-    click_link 'Atom 2'
+    click_link project.name
+    
     expect(page.current_url).to eql(project_url(project))
   end
 end
