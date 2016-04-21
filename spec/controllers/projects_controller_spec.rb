@@ -37,4 +37,11 @@ RSpec.describe ProjectsController, type: :controller do
     expect(response).to redirect_to(root_path)
     expect(flash[:alert]).to eql("You must be an admin to do that.")
   end
+
+  it "cannot access the show action without permission" do
+    project = FactoryGirl.create(:project)
+    get :show, id: project.id
+
+    
+  end
 end
