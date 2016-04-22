@@ -11,6 +11,8 @@ RSpec.describe ProjectsController, type: :controller do
 
     expect(response).to redirect_to(projects_path)
     message = "The project you were looking for could not be found."
+
+    expect(flash[:alert]).to eql(message)
   end
 
   context "standard users" do
