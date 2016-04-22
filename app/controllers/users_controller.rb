@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  scope :by_name, -> { order(:name) }
 
   def new
     @user = User.new
@@ -24,5 +25,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :password, :password_confirmation)
     end
-    
+
 end
