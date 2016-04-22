@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe ProjectsController, type: :controller do
   let(:user) { FactoryGirl.create(:user) }
+  before do
+    sign_id(user)
+  end
 
   context "standard users" do
     before do
