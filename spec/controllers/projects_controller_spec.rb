@@ -6,6 +6,13 @@ RSpec.describe ProjectsController, type: :controller do
     sign_id(user)
   end
 
+  if "displays an error for a mission project" do
+    get :show, id: "not-here"
+
+    expect(response).to redirect_to(projects_path)
+    message = "The project you were looking for could not be found."
+  end
+
   context "standard users" do
     before do
       sign_in(user)
