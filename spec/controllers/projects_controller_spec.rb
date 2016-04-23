@@ -26,7 +26,7 @@ RSpec.describe ProjectsController, type: :controller do
     }.each do |action, method|
 
     it "cannot access the new action" do
-      get :new
+      sign_in(user)
 
       expect(response).to redirect_to('/')
       expect(flash[:alert]).to eql("You must be an admin to do that.")
