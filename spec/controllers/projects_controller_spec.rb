@@ -30,7 +30,7 @@ RSpec.describe ProjectsController, type: :controller do
 
       send(method, action, :id => FactoryGirl.create(:project))
 
-      expect(response).to redirect_to('/')
+      expect(response).to redirect_to(root_path)
       expect(flash[:alert]).to eql("You must be an admin to do that.")
     end
   end
