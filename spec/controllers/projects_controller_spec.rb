@@ -28,6 +28,8 @@ RSpec.describe ProjectsController, type: :controller do
     it "cannot access the new action" do
       sign_in(user)
 
+      send(method, action, :id => FactoryGirl.create(:project))
+
       expect(response).to redirect_to('/')
       expect(flash[:alert]).to eql("You must be an admin to do that.")
     end
