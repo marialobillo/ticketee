@@ -16,9 +16,6 @@ RSpec.describe ProjectsController, type: :controller do
   end
 
   context "standard users" do
-    before do
-      sign_in(user)
-    end
 
     {
       new: :get,
