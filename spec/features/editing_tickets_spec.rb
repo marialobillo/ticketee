@@ -6,6 +6,7 @@ feature "Editing tickets" do
   let!(:user) { FactoryGirl.create(:ticket, project: project) }
 
   before do
+    define_permission!(user, "view", project)
     sign_in_as!(user)
     visit '/'
     click_link project.name
