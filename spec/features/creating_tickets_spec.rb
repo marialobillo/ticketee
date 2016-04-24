@@ -11,15 +11,15 @@ feature "Creating Tickets" do
     visit "/"
     click_link project.name
     click_link "New Ticket"
-    message = "You need to sign in or sign up before continuing."
-    expect(page).to have_content(messege)
+  #  message = "You need to sign in or sign up before continuing."
+  #  expect(page).to have_content(messege)
 
-    fill_in "Name", with: user.name
-    fill_in "Password", with: user.password
-    click_button "Sign in"
+  #  fill_in "Name", with: user.name
+  #  fill_in "Password", with: user.password
+  #  click_button "Sign in"
 
-    click_link project.name
-    click_link "New Ticket"
+  #  click_link project.name
+  #  click_link "New Ticket"
   end
 
   scenario "Creating a ticket" do
