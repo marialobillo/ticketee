@@ -19,6 +19,7 @@ feature "Viewing tickets" do
           title: "Standards compliance",
           description: "Isn't a joke.")
 
+    sign_in_as!(user)
     visit '/'
   end
 
