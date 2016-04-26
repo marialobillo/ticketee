@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe TicketsController, type: :controller do
-
+describe TicketsController do
+  let(:user) { FactoryGirl.create(:user) }
+  let(:project) { FactoryGirl.create(:project) }
+  let(:ticket) { FactoryGirl.create(:ticket, project: project, user: user) }
 end
