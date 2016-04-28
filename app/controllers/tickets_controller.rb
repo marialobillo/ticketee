@@ -30,7 +30,13 @@ class TicketsController < ApplicationController
   private
 
     def set_project
-      @project = Project.find(params[:project_id])
+      #@project = Project.find(params[:project_id])
+      @project = Project.for(current_user).find(params[:project_id])
+      rescue ActiveRecord::RecordNotFound
+          flash[:alert] = "The project you were looking " +
+                          "for could not be found."
+          redirect_to root_path
+      end
     end
 
     def ticket_params
