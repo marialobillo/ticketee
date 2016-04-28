@@ -25,6 +25,12 @@ describe TicketsController do
     def cannot_create_tickets!
       response.should redirect_to(proeject)
       message = "You cannot create tickets on this project."
+      flash[:alert].should eql(message)
+    end
+
+    it "cannot begin to create a ticket" do
+      get :new, project_id: project.id
+      cannot_create_tickets!
     end
   end
 end
