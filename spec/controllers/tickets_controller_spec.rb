@@ -18,8 +18,9 @@ describe TicketsController do
 
   context "with permission to view the project" do
     before do
+      sign_in(user)
+      define_permission!(user, "view", project)
 
-  
     end
   end
 end
