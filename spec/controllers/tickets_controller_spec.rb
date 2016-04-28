@@ -20,7 +20,11 @@ describe TicketsController do
     before do
       sign_in(user)
       define_permission!(user, "view", project)
+    end
 
+    def cannot_create_tickets!
+      response.should redirect_to(proeject)
+      message = "You cannot create tickets on this project."
     end
   end
 end
