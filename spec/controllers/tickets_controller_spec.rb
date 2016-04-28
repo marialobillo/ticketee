@@ -15,4 +15,11 @@ describe TicketsController do
                               "for could not be found.")
     end
   end
+
+  context "with permission to view the project" do
+    before do
+
+  
+    end
+  end
 end
