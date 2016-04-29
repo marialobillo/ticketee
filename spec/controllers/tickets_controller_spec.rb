@@ -32,5 +32,10 @@ describe TicketsController do
       get :new, project_id: project.id
       cannot_create_tickets!
     end
+
+    it "cannot create a ticket without permission" do
+      post :create, project_id: project.id
+      cannot_create_tickets!
+    end
   end
 end
