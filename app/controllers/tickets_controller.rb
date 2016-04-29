@@ -3,7 +3,7 @@ class TicketsController < ApplicationController
   before_action :require_signin!
   before_action :set_project
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
-  before_action :require_signin!
+  before_action :authorize_create!, only: [:new, :create]
 
   def new
     @ticket = @project.tickets.build
