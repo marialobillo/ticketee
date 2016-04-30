@@ -48,4 +48,8 @@ class TicketsController < ApplicationController
       @ticket = @project.tickets.find(params[:id])
     end
 
+    def authorize_create!
+
+    end
+
 end
