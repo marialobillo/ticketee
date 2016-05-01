@@ -38,7 +38,8 @@ feature "Editing tickets" do
   context "with permission to view the context" do
 
     def cannot_update_tickets!
-      
+        expect(response).to redirect_to(project)
+        expect(flash[:alert]).to eql("Your cannot edit tickets on this project." )
     end
   end
 
