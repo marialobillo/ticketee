@@ -37,5 +37,9 @@ feature "Editing tickets" do
 
   context "with permission to view the context" do
 
+    def cannot_update_tickets!
+      
+    end
   end
+
 end
