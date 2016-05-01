@@ -34,4 +34,8 @@ feature "Editing tickets" do
 
     expect(page).to have_content("Ticket has not been updated.")
   end
+
+  context "with permission to view the context" do
+
+  end
 end
