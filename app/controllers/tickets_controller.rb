@@ -56,4 +56,8 @@ class TicketsController < ApplicationController
       end
     end
 
+    def authorize_update!
+
+    end
+
 end
