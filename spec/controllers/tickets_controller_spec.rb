@@ -55,6 +55,8 @@ describe TicketsController do
       delete :destroy, { project_id: project.id, id:ticket.id }
 
       expect(response).to redirect_to(project)
+      message = "You cannot delete tickets from this project."
+      expect(flash[:alert]).to eql(message)
     end
   end
 end
