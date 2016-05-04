@@ -50,5 +50,9 @@ describe TicketsController do
                   }
       cannot_update_tickets!
     end
+
+    it "cannot delete a ticket without permission" do
+    
+    end
   end
 end
