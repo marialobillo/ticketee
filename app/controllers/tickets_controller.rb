@@ -63,4 +63,8 @@ class TicketsController < ApplicationController
       end
     end
 
+    def authorize_delete!
+
+    end
+
 end
