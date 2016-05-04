@@ -52,7 +52,9 @@ describe TicketsController do
     end
 
     it "cannot delete a ticket without permission" do
-    
+      delete :destroy, { project_id: project.id, id:ticket.id }
+
+      expect(response).to redirect_to(project)
     end
   end
 end
