@@ -65,7 +65,8 @@ class TicketsController < ApplicationController
 
     def authorize_delete!
       if !current_user.admin? && cannot?(:"delete tickets", @project)
-
+        flash[:alert] = "You cannot delete ticktes from this project."
+        redirect_to @project
       end
     end
 
