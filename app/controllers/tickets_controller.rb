@@ -64,7 +64,9 @@ class TicketsController < ApplicationController
     end
 
     def authorize_delete!
+      if !current_user.admin? && cannot?(:"delete tickets", @project)
 
+      end
     end
 
 end
