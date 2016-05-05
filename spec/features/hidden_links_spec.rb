@@ -66,7 +66,8 @@ feature "hidden links" do
     scenario "New ticket link is shown to a user with permission" do
       define_permission!(user, "view", project)
       define_permission!(user, "create tickets", project)
-      
+      visit project_path(project)
+      assert_link_for "New Ticket"
     end
   end
 end
