@@ -5,6 +5,7 @@ class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   before_action :authorize_create!, only: [:new, :create]
   before_action :authorize_update!, only: [:edit, :udpate]
+  before_action :authorize_delete!, only: [:destroy]
 
   def new
     @ticket = @project.tickets.build
