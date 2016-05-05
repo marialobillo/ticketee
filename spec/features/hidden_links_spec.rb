@@ -64,6 +64,8 @@ feature "hidden links" do
     end
 
     scenario "New ticket link is shown to a user with permission" do
+      define_permission!(user, "view", project)
+      define_permission!(user, "create tickets", project)
       
     end
   end
