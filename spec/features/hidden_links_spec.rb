@@ -62,5 +62,9 @@ feature "hidden links" do
       visit project_path(project)
       assert_no_link_for "Delete Project"
     end
+
+    scenario "New ticket link is shown to a user with permission" do
+      
+    end
   end
 end
