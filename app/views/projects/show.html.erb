@@ -13,8 +13,10 @@
       class: 'btn btn-info'
       %>
   <%= link_to "Edit Project", edit_project_path(@project), class: 'btn btn-info' %>
-  <%= link_to "New Ticket", new_project_ticket_path(@project) %>
-    <%= link_to 'Back Home', root_path , class: 'btn btn-info' %>
+  <% authorized?(:"create tickets", @project) do %>
+    <%= link_to "New Ticket", new_project_ticket_path(@project) %>
+  <% end %>
+  <%= link_to 'Back Home', root_path , class: 'btn btn-info' %>
 </div>
 
 <ul id="tickets">

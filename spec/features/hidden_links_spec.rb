@@ -75,5 +75,10 @@ feature "hidden links" do
       visit project_path(project)
       assert_no_link_for "New Ticket"
     end
+
+    scenario "New ticket link is shown to adimins" do
+      visit project_path(project)
+      assert_link_for "New Ticket"
+    end
   end
 end
