@@ -83,7 +83,9 @@ feature "hidden links" do
 
     scenario "Edit ticket link is shown to a user with permission" do
       #this scenario needs the tickets created first to set correct
-      
+      #permissions ticket
+      define_permission!(user, "view", project)
+      define_permission!(user, "edit tickets", project)
     end
   end
 end
