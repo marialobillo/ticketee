@@ -69,5 +69,9 @@ feature "hidden links" do
       visit project_path(project)
       assert_link_for "New Ticket"
     end
+
+    scenario "New ticket link is hidden from a user without permission" do
+      
+    end
   end
 end
