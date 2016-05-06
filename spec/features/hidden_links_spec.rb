@@ -80,5 +80,10 @@ feature "hidden links" do
       visit project_path(project)
       assert_link_for "New Ticket"
     end
+
+    scenario "Edit ticket link is shown to a user with permission" do
+      #this scenario needs the tickets created first to set correct
+      
+    end
   end
 end
