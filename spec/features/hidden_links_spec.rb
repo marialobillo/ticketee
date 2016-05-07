@@ -94,7 +94,8 @@ feature "hidden links" do
     scenario "Edit ticket link is hidden from a user without permission" do
       ticket
        define_permission!(user, "view", project)
-       
+       visit project_path(project)
+       click_link ticket.title
     end
   end
 end
