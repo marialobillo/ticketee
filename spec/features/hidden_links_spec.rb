@@ -93,7 +93,8 @@ feature "hidden links" do
 
     scenario "Edit ticket link is hidden from a user without permission" do
       ticket
-      
+       define_permission!(user, "view", project)
+       
     end
   end
 end
