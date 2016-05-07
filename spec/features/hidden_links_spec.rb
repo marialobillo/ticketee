@@ -90,5 +90,10 @@ feature "hidden links" do
       click_link ticket.title
       assert_link_for "Edit Ticket"
     end
+
+    scenario "Edit ticket link is hidden from a user without permission" do
+      ticket
+      
+    end
   end
 end
