@@ -96,6 +96,7 @@ feature "hidden links" do
        define_permission!(user, "view", project)
        visit project_path(project)
        click_link ticket.title
+       assert_no_link_for "Edit Ticket"
     end
   end
 end
