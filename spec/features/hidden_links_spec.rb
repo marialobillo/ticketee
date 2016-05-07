@@ -86,6 +86,9 @@ feature "hidden links" do
       #permissions ticket
       define_permission!(user, "view", project)
       define_permission!(user, "edit tickets", project)
+      visit project_path(project)
+      click_link ticket.title
+      assert_link_for "Edit Ticket"
     end
   end
 end
