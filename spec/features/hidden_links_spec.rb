@@ -4,6 +4,7 @@ feature "hidden links" do
   let(:user) { FactoryGirl.create(:user) }
   let(:admin) { FactoryGirl.create(:admin_user) }
   let(:project) { FactoryGirl.create(:project) }
+  let(:ticket) { FactoryGirl.create(:ticket, project: project, user: user) }
 
 
   context "anonymous users" do
