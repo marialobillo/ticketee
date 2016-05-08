@@ -98,5 +98,9 @@ feature "hidden links" do
        click_link ticket.title
        assert_no_link_for "Edit Ticket"
     end
+
+    scenario "Edit ticket link is shown to admins" do
+      
+    end
   end
 end
