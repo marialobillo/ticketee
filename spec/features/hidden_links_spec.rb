@@ -102,6 +102,8 @@ feature "hidden links" do
     scenario "Edit ticket link is shown to admins" do
       ticket
       visit project_path(project)
+      click_link ticket.title
+      assert_link_for "Edit Ticket"
     end
   end
 end
