@@ -113,6 +113,7 @@ feature "hidden links" do
       define_permission!(user, "delete tickets", project)
       visit project_path(project)
       click_link ticket.title
+      assert_link_for "Delete Ticket"
     end
   end
 end
