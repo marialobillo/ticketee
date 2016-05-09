@@ -106,5 +106,10 @@ feature "hidden links" do
       click_link ticket.title
       assert_link_for "Edit Ticket"
     end
+
+    scenario "Delete ticket link is shown to a user with permission" do
+      ticket
+      
+    end
   end
 end
