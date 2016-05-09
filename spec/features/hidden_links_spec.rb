@@ -109,7 +109,8 @@ feature "hidden links" do
 
     scenario "Delete ticket link is shown to a user with permission" do
       ticket
-      
+      define_permission!(user, "view", project)
+      define_permission!(user, "delete tickets", project)
     end
   end
 end
