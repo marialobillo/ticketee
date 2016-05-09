@@ -111,6 +111,8 @@ feature "hidden links" do
       ticket
       define_permission!(user, "view", project)
       define_permission!(user, "delete tickets", project)
+      visit project_path(project)
+      click_link ticket.title
     end
   end
 end
