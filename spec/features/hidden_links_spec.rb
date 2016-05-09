@@ -40,7 +40,8 @@ feature "hidden links" do
     end
 
     scenario "Delete ticket link is shown to admins" do
-      
+      ticket
+      visit project_path(project)
     end
   end
 
