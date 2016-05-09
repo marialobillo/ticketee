@@ -38,6 +38,10 @@ feature "hidden links" do
       visit project_path(project)
       assert_link_for "Delete Project"
     end
+
+    scenario "Delete ticket link is shown to admins" do
+      
+    end
   end
 
   context "anonymous users" do
