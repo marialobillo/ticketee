@@ -3,9 +3,11 @@
   <span id="author">Created by <%= @ticket.user.email %></span>
   <%= simple_format(@ticket.description) %>
 
-  <%= authorized?("edit tickets", @project) do %>
+  <% authorized?("edit tickets", @project) do %>
     <%= link_to "Edit Ticket", [:edit, @project, @ticket]%>
   <% end %>
-  <%= link_to "Delete Ticket" , [@project, @ticket], method: :delete,
+  <% authorized?("delete tickets", @project) do %>
+    <%= link_to "Delete Ticket" , [@project, @ticket], method: :delete,
       data: { confirm: "Are you sure you want to delete this ticket?" } %>
+  <% end %>
 </div>
