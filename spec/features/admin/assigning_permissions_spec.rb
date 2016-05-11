@@ -17,6 +17,12 @@ feature "Assigning permissions" do
 
   scenario "Viewing a project" do
     check_permissin_box "view", project
+
+    click_button "Update"
+    click_link "Sign out"
+
+    sign_in_as!(user)
+    expect(page).to have_content(project.name)
   end
 
 end
