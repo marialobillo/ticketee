@@ -15,4 +15,8 @@ feature "Assigning permissions" do
     click_link "Permissions"
   end
 
+  scenario "Viewing a project" do
+    check_permissin_box "view", project
+  end
+
 end
