@@ -17,8 +17,10 @@
                 @ability.can?(name.to_sym, project),
                 @ability.can?(name.to_sym, project)%>
             </td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <%= submit_tag "Update"%>
 <% end %>
