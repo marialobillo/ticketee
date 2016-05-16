@@ -25,4 +25,9 @@ feature "Assigning permissions" do
     expect(page).to have_content(project.name)
   end
 
+  scenario "Creating tickets for a project" do
+    check_permissin_box "view", project
+    
+  end
+
 end
