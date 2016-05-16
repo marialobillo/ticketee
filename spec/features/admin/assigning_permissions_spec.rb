@@ -27,6 +27,10 @@ feature "Assigning permissions" do
 
   scenario "Creating tickets for a project" do
     check_permissin_box "view", project
+    check_permissin_box "create_tickets", project
+    click_button "Update"
+    click_link "Sign out"
+
     
   end
 
