@@ -46,6 +46,13 @@ feature "Assigning permissions" do
     check_permissin_box "edit_tickets", project
     click_button "Update"
     click_link "Sign out"
+
+    sign_in_as!(user)
+    click_link project.name
+    click_link ticket.title
+    click_link "Edit Ticket"
+    fill_in "Title", with: "Really shiny!"
+    click_button "Update Ticket"
   end
 
 end
