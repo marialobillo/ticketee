@@ -36,6 +36,9 @@ feature "Assigning permissions" do
     click_link "New Ticket"
     fill_in "Title", with: "Shiny!"
     fill_in "Description", with: "Make it so!"
+    click_button "Create"
+
+    expect(page).to have_content("Ticket has been created.")
   end
 
 end
