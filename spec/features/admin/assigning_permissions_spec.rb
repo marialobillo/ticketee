@@ -53,6 +53,8 @@ feature "Assigning permissions" do
     click_link "Edit Ticket"
     fill_in "Title", with: "Really shiny!"
     click_button "Update Ticket"
+
+    expect(page).to have_content("Ticket has been updated.")
   end
 
 end
