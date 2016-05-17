@@ -41,4 +41,8 @@ feature "Assigning permissions" do
     expect(page).to have_content("Ticket has been created.")
   end
 
+  scenario "Updating a ticket for a project" do
+    
+  end
+
 end
