@@ -67,6 +67,7 @@ feature "Assigning permissions" do
     sign_in_as!(user)
     click_link project.name
     click_link ticket.title
+    click_link "Delete Ticket"
   end
 
 end
