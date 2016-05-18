@@ -58,6 +58,12 @@ feature "Assigning permissions" do
   end
 
   scenario "Deleting a ticket for a project" do
+    check_permission_box "view", project
+    check_permission_box "delete_tickets", project
+
+    click_button "Update"
+    click_link "Sign out"
+
     
   end
 
