@@ -64,7 +64,9 @@ feature "Assigning permissions" do
     click_button "Update"
     click_link "Sign out"
 
-    
+    sign_in_as!(user)
+    click_link project.name
+    click_link ticket.title
   end
 
 end
