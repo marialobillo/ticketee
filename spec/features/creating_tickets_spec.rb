@@ -60,6 +60,10 @@ feature "Creating Tickets" do
     attach_file "File", "spec/fixtures/speed.txt"
     click_button "Create Ticket"
 
-    
+    expect(page).to have_content("Ticket has been created.")
+
+    within("#ticket .asset") do
+      expect(page).to have_content("speed.txt")
+    end
   end
 end
