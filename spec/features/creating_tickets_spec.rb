@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "Creating Tickets" do
   before do
     define_permission!(user, "view", project)
-    define_permission!(user, "create tickets", project) 
+    define_permission!(user, "create tickets", project)
     project = FactoryGirl.create(:project)
     user = FactoryGirl.create(:user)
     @email = user.email
@@ -52,5 +52,9 @@ feature "Creating Tickets" do
   whitin "#ticket #author" do
     #expect(page).to have_content("Created by sample@example.com")
     expect(page).to have_content("Created by #{@email}")
+  end
+
+  scenario "Creating a ticket with an attachment" do
+    
   end
 end
