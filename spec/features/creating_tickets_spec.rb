@@ -58,5 +58,8 @@ feature "Creating Tickets" do
     fill_in "Title", with: "Add documentation for blink tag"
     fill_in "Description", with: "The blink tag has a speed attribute"
     attach_file "File", "spec/fixtures/speed.txt"
+    click_button "Create Ticket"
+
+    
   end
 end
