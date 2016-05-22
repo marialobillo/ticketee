@@ -16,6 +16,8 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 
+gem 'carrierwave', '~> 0.11.2'
+
 
 group :development, :test do
   gem 'byebug'
