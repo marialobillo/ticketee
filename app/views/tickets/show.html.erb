@@ -5,8 +5,9 @@
   <%= simple_format(@ticket.description) %>
 
   <% if @ticket.assets.present? %>
-    <h3>Attached File</h3>
-    <div class="asset">
+    <h3>Attached Files</h3>
+    <div class="assets">
+      <% @ticket.assets.each do |asset| %>
       <p>
         <%= link_to File.basename(@ticket.asset.path),
                   @ticket.asset.url %>
@@ -16,6 +17,7 @@
           <%= number_to_human_size(@ticket.asset.size) %>
         </small>
       </p>
+      <% end %>
     </div>
   <% end %>
 
