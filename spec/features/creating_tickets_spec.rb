@@ -68,6 +68,8 @@ feature "Creating Tickets" do
 
     within("#ticket .asset") do
       expect(page).to have_content("speed.txt")
+      expect(page).to have_content("spin.txt")
+      expect(page).to have_content("gradient.txt")
     end
   end
 end
