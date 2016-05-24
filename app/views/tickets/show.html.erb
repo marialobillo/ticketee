@@ -4,7 +4,7 @@
 
   <%= simple_format(@ticket.description) %>
 
-  <% if @ticket.asset.present? %>
+  <% if @ticket.assets.present? %>
     <h3>Attached File</h3>
     <div class="asset">
       <p>
