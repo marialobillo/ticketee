@@ -22,14 +22,13 @@
   <%= f.text_area :description %>
 </p>
 
-<p>
-  <%= f.label :asset, "File #1" %><br>
-  <%= f.file_field :asset %>
-</p>
-<p>
-  <%= f.label :asset_2, "File #2" %>
-  <%= f.file_field :asset_2 %>
-</p>
+<% number = 0 %>
+<%= f.fields_for :assets do |asset| %>
+  <p>
+    <%= asset.label :asset, "File ##{number += 1}" %>
+    <%= asset.file_field :asset %>
+  </p>
+<% end %>
 
 <p>
   <%= f.submit %>
