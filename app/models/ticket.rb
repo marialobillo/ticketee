@@ -10,5 +10,5 @@ class Ticket < ActiveRecord::Base
                           length: { minimum: 10 }
 
   has_many :assets
-  
+  accepts_nested_attributes_for :assets
 end
