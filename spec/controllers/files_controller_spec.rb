@@ -7,4 +7,9 @@ RSpec.describe FilesController, type: :controller do
   let(:project) { FactoryGirl.create(:project) }
   let(:ticket) { FactoryGirl.create(:ticket, project: project, user: good_user) }
 
+  let(:path) { Rails.root + 'spec/fixtures/speed.txt' }
+  let(:asset) do
+    ticket.assets.create(asset: File.open(path))
+  end
+
 end
