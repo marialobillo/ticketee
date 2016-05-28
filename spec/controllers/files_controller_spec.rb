@@ -12,4 +12,8 @@ RSpec.describe FilesController, type: :controller do
     ticket.assets.create(asset: File.open(path))
   end
 
+  before do
+    good_user.permission.create!(action: "view", thing: project)
+  end
+
 end
