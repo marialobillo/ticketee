@@ -21,7 +21,10 @@ RSpec.describe FilesController, type: :controller do
       sign_in(good_user)
     end
 
-    
+    it "can access assets in a project" do
+      get 'show', id: asset.id
+      expect(response.body).to eql(File.read(path))
+    end
   end
 
 end
