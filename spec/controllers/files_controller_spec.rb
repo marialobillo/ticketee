@@ -31,6 +31,12 @@ RSpec.describe FilesController, type: :controller do
     before do
       sign_in(bad_user)
     end
+
+    it "cannot access assets in this project" do
+      get 'show', id: asset.id
+      expect(response).to redirect_to(root_path)
+      expect(flash[:alert]).to eql("The asset you were looking for could not be found.")
+    end
   end
 
 end
