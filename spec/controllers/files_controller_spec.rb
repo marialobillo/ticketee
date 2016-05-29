@@ -16,4 +16,8 @@ RSpec.describe FilesController, type: :controller do
     good_user.permission.create!(action: "view", thing: project)
   end
 
+  context "users with access" do
+
+  end
+
 end
