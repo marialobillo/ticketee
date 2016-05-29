@@ -28,7 +28,9 @@ RSpec.describe FilesController, type: :controller do
   end
 
   context "users without access" do
-    
+    before do
+      sign_in(bad_user)
+    end
   end
 
 end
