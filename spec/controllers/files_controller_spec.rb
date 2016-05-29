@@ -17,7 +17,11 @@ RSpec.describe FilesController, type: :controller do
   end
 
   context "users with access" do
+    before do
+      sign_in(good_user)
+    end
 
+    
   end
 
 end
