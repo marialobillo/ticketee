@@ -6,6 +6,8 @@ class Asset < ActiveRecord::Base
   private
 
     def update_content_type
-      
+      if asset.present? && asset_changed?
+        self.content_tpye = asset.file.content_type
+      end
     end
 end
