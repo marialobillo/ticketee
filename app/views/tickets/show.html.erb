@@ -11,6 +11,9 @@
       <p>
         <%= link_to File.basename(@ticket.asset.path),
                   @ticket.asset.url %>
+
+        <%= link_to File.basename(asset.asset.path),
+                  file_path(asset) %>
       </p>
       <p>
         <small>
