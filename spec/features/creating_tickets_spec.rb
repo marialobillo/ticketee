@@ -12,15 +12,6 @@ feature "Creating Tickets" do
     visit "/"
     click_link project.name
     click_link "New Ticket"
-  #  message = "You need to sign in or sign up before continuing."
-  #  expect(page).to have_content(messege)
-
-  #  fill_in "Name", with: user.name
-  #  fill_in "Password", with: user.password
-  #  click_button "Sign in"
-
-  #  click_link project.name
-  #  click_link "New Ticket"
   end
 
   scenario "Creating a ticket" do
@@ -54,11 +45,12 @@ feature "Creating Tickets" do
     expect(page).to have_content("Created by #{@email}")
   end
 
-  scenario "Creating a ticket with an attachment" do
+  scenario "Creating a ticket with an attachment", js: true do
     fill_in "Title", with: "Add documentation for blink tag"
     fill_in "Description", with: "The blink tag has a speed attribute"
 
     attach_file "File #1", Rails.root.join("spec/fixtures/speed.txt")
+    
     attach_file "File #2", Rails.root.join("spec/fixtures/spin.txt")
     attach_file "File #3", Rails.root.join("spec/fixtures/gradient.txt")
 
