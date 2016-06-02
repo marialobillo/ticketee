@@ -18,6 +18,8 @@ gem 'cancan', '~> 1.6', '>= 1.6.10'
 
 gem 'carrierwave', '~> 0.11.2'
 
+gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+
 
 group :development, :test do
   gem 'byebug'
