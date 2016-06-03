@@ -9,7 +9,7 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-
+    DataBaseCleaner.clean
   end
 
 end
