@@ -90,5 +90,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  config.user_transactional_fixtures = true
+  config.user_transactional_fixtures = false
 end
