@@ -31,6 +31,13 @@
 <% end %>
 
 <p>
+
+<p>
+  <%= link_to "Add another file", new_file_path,
+      :remote => true,
+      :update => "files",
+      :position => "after" %>
+</p>
   <%= f.submit %>
 </p>
 <% end %>
