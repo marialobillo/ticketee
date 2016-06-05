@@ -38,6 +38,13 @@
       :update => "files",
       :position => "after" %>
 </p>
+<div id="files">
+  <%= f.fields_for :assets, :child_index => number do |asset| %>
+    <p>
+      
+    </p>
+  <% end %>
+</div>
   <%= f.submit %>
 </p>
 <% end %>
