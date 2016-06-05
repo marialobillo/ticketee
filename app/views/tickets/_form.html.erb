@@ -39,12 +39,7 @@
       :position => "after" %>
 </p>
 <div id="files">
-  <%= f.fields_for :assets, :child_index => number do |asset| %>
-    <p>
-      <%= asset.label :asset, "File ##{number += 1}" %>
-      <%= asset.file_field :asset %>
-    </p>
-  <% end %>
+  <%= render partial: "files/form", locals: { number: number }%>
 </div>
   <%= f.submit %>
 </p>
