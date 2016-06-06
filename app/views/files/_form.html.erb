@@ -1,3 +1,4 @@
+<%= fields_for @ticket do |f| %>
 <p>
   <%= f.fields_for :assets, :child_index => number do |asset| %>
    <p>
@@ -6,3 +7,4 @@
 </p>
 <% end %>
 </p>
+<% end %>
