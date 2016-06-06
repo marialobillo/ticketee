@@ -2,6 +2,7 @@ class FilesController < ApplicationController
   before_filter :require_signin!
 
   def new
+    @ticket = Ticket.new
     render partial: "files/form",
         locals: { number: params[:number].to_i }
   end
