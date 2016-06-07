@@ -7,3 +7,6 @@ $(->
     $.get(url,
       (data)->
         $('#files').append(data)
+      )
+    )
+  )
