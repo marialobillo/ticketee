@@ -22,4 +22,10 @@ feature "Creating comments" do
       page.should have_content("Added a comment!")
     end
   end
+
+  scenario "Creating an invalid comment" do
+    click_link ticket.title
+    click_button "Create Comment"
+    
+  end
 end
