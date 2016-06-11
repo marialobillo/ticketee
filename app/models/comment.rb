@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
 
-  validates :text, :presence => true
+  attr_accessible :text
   belongs_to :user
 end
