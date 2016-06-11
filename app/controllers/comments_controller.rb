@@ -15,4 +15,10 @@ class CommentsController < ApplicationController
       render :template => "tickets/show" <co id="ch10_v2_5_2" />
     end
   end
+
+  private
+
+    def find_ticket
+      @ticket = Ticket.find(params[:ticket_id])
+    end
 end
