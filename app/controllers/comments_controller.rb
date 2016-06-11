@@ -11,7 +11,8 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment has been created."
       redirect_to [@ticket.project, @ticket] <co id="ch10_v2_5_1" />
     else
-      
+      flash[:alert] = "Comment has not been created."
+      render :template => "tickets/show" <co id="ch10_v2_5_2" />
     end
   end
 end
