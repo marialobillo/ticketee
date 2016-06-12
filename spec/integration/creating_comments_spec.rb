@@ -33,5 +33,10 @@ feature "Creating comments" do
   scenario "Changing a ticket's state" do
     fill_in "Text", :with => "This is a real issue"
     select "Open", :from => "State"
+    click_button "Create Comment" <co id="ch10_234_1" />
+    page.should have_content("Comment has been created.")
+    within("#ticket .state") do
+      page.should have_content("Open")
+    end
   end
 end
