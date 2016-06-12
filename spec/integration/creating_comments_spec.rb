@@ -29,4 +29,9 @@ feature "Creating comments" do
     page.should have_content("Comment has not been created.")
     page.should have_content("Text can't be blank")
   end
+
+  scenario "Changing a ticket's state" do
+    fill_in "Text", :with => "This is a real issue"
+    select "Open", :from => "State"
+  end
 end
