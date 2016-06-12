@@ -5,7 +5,6 @@ class CreateStates < ActiveRecord::Migration
       t.string :color
       t.string :background
 
-      t.timestamps null: false
     end
   end
 end
