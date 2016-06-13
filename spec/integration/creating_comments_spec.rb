@@ -7,6 +7,7 @@ feature "Creating comments" do
 
   before do
     define_permission!(user, "view", project)
+    Factory(:state, :name => "Open")
 
     sign_in_as!(user)
     visit '/'
