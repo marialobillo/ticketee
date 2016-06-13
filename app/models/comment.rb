@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
 
-  attr_accessible :text
+  attr_accessible :text, :state_id
   belongs_to :user
   belongs_to :state
 end
