@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
 
   after_create :set_ticket_state
 
-  attr_accessible :text, :state_id
+  validates :text, :presence => true
   belongs_to :user
   belongs_to :state
 end
