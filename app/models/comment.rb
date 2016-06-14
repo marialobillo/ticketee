@@ -6,4 +6,6 @@ class Comment < ActiveRecord::Base
   belongs_to :user
   belongs_to :state
   belongs_to :ticket
+
+  delegate :project, to: => ticket
 end
