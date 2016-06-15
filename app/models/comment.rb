@@ -8,4 +8,12 @@ class Comment < ActiveRecord::Base
   belongs_to :ticket
 
   delegate :project, to: => ticket
+
+
+  private
+
+    def set_ticket_state
+      self.ticket.state = self.state
+      self.ticket.save!
+    end
 end
