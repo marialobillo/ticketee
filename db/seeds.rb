@@ -19,3 +19,7 @@ State.create(:name => "New",
 State.create(:name => "Open",
               :background => "#00CFFD",
               :color => "white")
+
+State.create(:name => "Closed",
+              :background => "black",
+              :color => "white")
