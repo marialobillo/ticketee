@@ -9,10 +9,10 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Comment has been created."
-      redirect_to [@ticket.project, @ticket] <co id="ch10_v2_5_1" />
+      redirect_to [@ticket.project, @ticket] 
     else
       flash[:alert] = "Comment has not been created."
-      render :template => "tickets/show" <co id="ch10_v2_5_2" />
+      render :template => "tickets/show" 
     end
   end
 
