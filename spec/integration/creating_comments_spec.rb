@@ -25,7 +25,7 @@ feature "Creating comments" do
   end
 
   scenario "Creating an invalid comment" do
-    click_link ticket.title
+    #click_link ticket.title
     click_button "Create Comment"
     page.should have_content("Comment has not been created.")
     page.should have_content("Text can't be blank")
