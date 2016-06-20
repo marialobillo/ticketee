@@ -37,7 +37,10 @@ feature "Creating comments" do
     click_button "Create Comment" <co id="ch10_234_1" />
     page.should have_content("Comment has been created.")
     within("#ticket .state") do
-      page.should have_content("State: Open")
+      page.should have_content("Open")
+    end
+    within("#comments") do
+      page.should have_content("Stage: Open")
     end
   end
 end
