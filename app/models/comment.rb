@@ -9,6 +9,8 @@ class Comment < ActiveRecord::Base
 
   delegate :project, to: => ticket
 
+  before_create :set_previous_state
+
 
   private
 
