@@ -11,6 +11,8 @@ class Comment < ActiveRecord::Base
 
   before_create :set_previous_state
 
+  belongs_to :previous_state, :class_name => "State"
+
 
   private
 
