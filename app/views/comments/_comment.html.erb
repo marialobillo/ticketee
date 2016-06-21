@@ -1,6 +1,7 @@
 <%= div_for(comment) do %>
   <h4><%= comment.user %></h4>
-  <%= render comment.previous_state %> &rarr;
-    <%= render comment.state %>
+  <% if comment.previous_state != comment.state %>
+    <%= comment.previous_state %> &rarr; <%= comment.state %>
+  <% end %>
   <%= simple_format(comment.text) %>
 <% end %>
