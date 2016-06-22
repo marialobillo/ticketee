@@ -26,4 +26,8 @@ class ApplicationController < ActionController::Base
         redirect_to root_path
       end
     end
+
+    def find_states
+      @states = State.all
+    end
 end
