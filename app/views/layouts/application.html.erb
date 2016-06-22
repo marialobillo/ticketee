@@ -13,7 +13,8 @@
   <style media="screen">
     <% for state in @states %>
       .state_<%= state.name.parameterize %>{
-         
+         background: <%= state.background %>;
+         color: <%= state.color %>;
       }
     <% end %>
   </style>
