@@ -9,5 +9,7 @@ feature 'Creating states' do
     click_link "Admin"
     click_link "States"
     click_link "New State"
+    fill_in "Name", :with => "Duplicate"
+    click_button "Create State"
   end
 end
