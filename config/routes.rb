@@ -4,7 +4,11 @@ Rails.application.routes.draw do
     root :to => "base#index"
     resources :users do
       resources :permissions
-      resources :states
+      resources :states do
+        member do
+          get :make_default
+        end
+      end
 
       put "permissions", to: "permissions#set",
                         as: "set_permissions"
