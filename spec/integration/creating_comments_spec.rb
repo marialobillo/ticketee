@@ -43,4 +43,9 @@ feature "Creating comments" do
       page.should have_content("Stage: Open")
     end
   end
+
+  scenario "A user without permission cannot change the state" do
+    click_link ticket.title
+    
+  end
 end
