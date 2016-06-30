@@ -46,6 +46,7 @@ feature "Creating comments" do
 
   scenario "A user without permission cannot change the state" do
     click_link ticket.title
-    
+    find_element = lambda { find("#comment_state_id") }
+    find_element.should raise_error(Capybara::ElementNotFound)
   end
 end
