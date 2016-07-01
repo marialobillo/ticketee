@@ -63,5 +63,9 @@ feature "Creating comments" do
     fill_in "Text", :with => "Opening this ticket."
     select "Open", :from => "State"
     click_button "Create Comment"
+    page.should have_content("Comment has been created.")
+    within("#ticket .state") do
+      page.should have_content("Open")
+    end
   end
 end
