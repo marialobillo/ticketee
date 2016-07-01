@@ -51,4 +51,11 @@ feature "Creating comments" do
     find_element.should(raise_error(Capybara::ElementNotFound), message)
     <co id="ch10_813_1"/>
   end
+
+  scenario "Changing states for a ticket" do
+    check_permission_box "view", project
+    check_permission_box "change_states", project
+    click_button "Update"
+    click_button "Sign out"
+  end
 end
