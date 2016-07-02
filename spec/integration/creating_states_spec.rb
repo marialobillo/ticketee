@@ -3,6 +3,7 @@ require 'spec_helper'
 feature 'Creating states' do
   before do
     sign_in_as!(Factory(:admin_user))
+    State.create!(:name => "Open")
   end
 
   scenario "Creating a state" do
