@@ -12,4 +12,6 @@ RSpec.describe CommentsController, type: :controller do
     ticket
   end
 
+  let(state) { State.create!(:name => "New") }
+
 end
