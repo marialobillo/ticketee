@@ -4,4 +4,12 @@ RSpec.describe CommentsController, type: :controller do
   let(:user) { Factory(:confirmed_user) }
   let(:project) { Project.create(:name => "Ticketee") }
 
+  let(:ticket) do
+    ticket = project.tickets.build(:title => "State transitions",
+                        description => "Can't be hacked.")
+    ticket.user = user
+    ticket.save
+    ticket
+  end
+
 end
