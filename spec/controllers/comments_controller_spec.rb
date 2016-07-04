@@ -14,4 +14,8 @@ RSpec.describe CommentsController, type: :controller do
 
   let(state) { State.create!(:name => "New") }
 
+  context "a user without permission to set state" do
+    
+  end
+
 end
