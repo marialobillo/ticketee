@@ -69,5 +69,8 @@ feature "Creating Tickets" do
 
   scenario "Creating a ticket with tags" do
     fill_in "Title", :with => "Non-standards compliance"
+    fill_in "Description", :with => "My pages are ugly!"
+    fill_in "Tags", :with => "browser visual"
+    click_button "Create Ticket"
   end
 end
