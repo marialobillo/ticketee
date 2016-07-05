@@ -66,4 +66,8 @@ feature "Creating Tickets" do
       expect(page).to have_content("spin.txt")
     end
   end
+
+  scenario "Creating a ticket with tags" do
+    fill_in "Title", :with => "Non-standards compliance"
+  end
 end
