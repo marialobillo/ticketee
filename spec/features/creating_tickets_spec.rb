@@ -72,5 +72,10 @@ feature "Creating Tickets" do
     fill_in "Description", :with => "My pages are ugly!"
     fill_in "Tags", :with => "browser visual"
     click_button "Create Ticket"
+    page.should have_content("Ticket has been created.")
+    within("#ticket #tags") do
+      page.should have_content("browser")
+      page.should have_content("visual")
+    end
   end
 end
