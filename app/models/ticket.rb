@@ -19,5 +19,7 @@ class Ticket < ActiveRecord::Base
     @tag_names
   end
 
-  
+  def tag_names=(names)
+    @tag_names = names
+  end
 end
