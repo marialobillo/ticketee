@@ -14,5 +14,10 @@ class Ticket < ActiveRecord::Base
   accepts_nested_attributes_for :assets
   has_many :comments
   attr_accessor :tag_names
+
+  def tag_names
+    @tag_names
+  end
+
   
 end
