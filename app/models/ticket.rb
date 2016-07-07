@@ -15,7 +15,7 @@ class Ticket < ActiveRecord::Base
   has_many :comments
 
   attr_accessor :tag_names
-  attr_accessible :description, :title, :assets_attributes
+  attr_accessible :description, :title, :assets_attributes, :tag_names
 
   def tag_names
     @tag_names
