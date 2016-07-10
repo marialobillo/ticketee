@@ -29,4 +29,6 @@ class Ticket < ActiveRecord::Base
   def tag_names=(names)
     @tag_names = names
   end
+
+  private 
 end
