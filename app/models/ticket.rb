@@ -30,5 +30,13 @@ class Ticket < ActiveRecord::Base
     @tag_names = names
   end
 
-  private 
+  private
+
+    def associate_tags
+      it tag_names
+        tag_names.split(" ") each do |name|
+          self.tags << Tag.find_or_create_by_name(name)
+        end
+      end
+    end
 end
