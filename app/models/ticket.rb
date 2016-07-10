@@ -19,6 +19,9 @@ class Ticket < ActiveRecord::Base
 
   has_and_belongs_to_many :tags
 
+
+  before_create :associate_tags
+
   def tag_names
     @tag_names
   end
