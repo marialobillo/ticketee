@@ -61,6 +61,12 @@ feature "Creating comments" do
     fill_in "Text", :with => "Adding the bug tag"
     fill_in "Tags", :with => "bug"
     click_button "Create Comment"
+
+    page.should have_content("Comment has been created.")
+    within("#ticke #tags") do
+      page.should have_content("bug")
+    end
+     
   end
 
 
