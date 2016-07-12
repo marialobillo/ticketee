@@ -57,6 +57,10 @@ feature "Creating comments" do
     within("#ticket #tags") do
       page.should_not have_content("bug")
     end
+
+    fill_in "Text", :with => "Adding the bug tag"
+    fill_in "Tags", :with => "bug"
+    click_button "Create Comment"
   end
 
 
