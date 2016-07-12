@@ -52,5 +52,12 @@ feature "Creating comments" do
     <co id="ch10_813_1"/>
   end
 
-  
+  scenario "Adding a tag to a ticket" do
+    click_link ticket.title
+    within("#ticket #tags") do
+      page.should_not have_content("bug")
+    end
+  end
+
+
 end
